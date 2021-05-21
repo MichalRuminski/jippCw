@@ -74,6 +74,16 @@ float& Macierz::operator() (int i, int j){
     return this->mac[i][i];
 }
 
+Macierz Macierz::operator~ (){
+    Macierz wynik = Macierz(this->n, this->mac);
+    for(int i = 0; i < n; i++){
+        for(int j=0; j< n; j++){
+            wynik.set(j,i,this->get(i,j));
+        }
+    }
+    return wynik;
+}
+
 std::ostream& operator<< (std::ostream &os, Macierz m){
     for(int i =0; i < ROZMIAR; i++){
         for(int j = 0; j < ROZMIAR; j++){
@@ -89,7 +99,7 @@ std::istream& operator>> (std::istream &is, Macierz &m){
     for(int i =0; i < ROZMIAR; i++){
         for(int j = 0; j < ROZMIAR; j++){
          is >> x;
-         m(i,j) = x;
+         m.set(i,j, x);
         }
     }
     return is;

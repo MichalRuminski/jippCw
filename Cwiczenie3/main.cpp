@@ -14,16 +14,15 @@ int main(){
             m2.set(i,j, rand() % 4); 
         }
     }
+    
+    
     Macierz m3;
+    Macierz m4 = ~m1;
     cout << m1;
     cout << endl;
-    cout << m2 << endl;
-
-    Macierz m4 = m1 * m2;
-
     cout << m4;
+    cout << endl;
     cin >> m3;
-
-    cout << m3;
+    cout << m3 << endl;
     return 0;
 }
