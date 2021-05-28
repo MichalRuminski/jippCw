@@ -17,7 +17,11 @@ int main(){
     
     
     Macierz m3;
+    m3 = m1 + m2;
+    cout << m3;
+    m3 = m1 * m2;
     Macierz m4 = ~m1;
+    m3 = 0.5 * m2;
     cout << m1;
     cout << endl;
     cout << m4;
