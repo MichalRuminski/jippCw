@@ -4,7 +4,7 @@ class Bryla {
     Bryla();
     Bryla(double r, double h);
     virtual void wypiszInfo();
-    virtual double obliczObjetosc();
+    virtual double obliczObjetosc() = 0;
     virtual ~Bryla();
 
     protected:
@@ -27,7 +27,7 @@ class Stozek : public Bryla{
     Stozek(double r, double h);
     virtual void wypiszInfo() override;
     virtual double obliczObjetosc() override;
-    ~Stozek();
+    virtual ~Stozek();
 
 };
 

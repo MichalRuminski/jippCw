@@ -15,5 +15,9 @@ int main(){
         std::cout << std::endl;
     }
 
+    for(int i = 0; i < 5; i++){
+        delete bryly[i];
+    }
 
+    return 0;
 }
